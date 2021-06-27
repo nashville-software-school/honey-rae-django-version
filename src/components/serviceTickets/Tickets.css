@@ -1,0 +1,99 @@
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tickets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .tickets {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.ticket {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid salmon;
+    margin: 1.25rem 0;
+    position: relative;
+    box-shadow: 0.25rem 0.25rem 0.35rem rgba(0,0,0,0.5);
+}
+
+.ticket__customer {
+    margin-bottom: 1rem;
+}
+
+.ticket__body {
+    margin: 0 0 1rem 0;
+}
+
+.ticket__icon {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+}
+
+.ticket__header {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.ticket__footer {
+    padding-top: 0.5rem;
+    border-top: 1px dotted silver;
+    margin-top: auto;
+    font-size: smaller;
+}
+
+.ticket__footer--detail {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerItem {
+    flex: 1;
+}
+
+.emergency {
+    background-color: rgb(255, 199, 199);
+}
+
+.status--in-progress {
+    background-color: lightgoldenrodyellow;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+}
+
+.status--new {
+    background-color: lightblue;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+}
+
+.status--completed {
+    background-color: lightgreen;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+}
+
+.activeTickets {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 1rem;
+    color: crimson;
+}
