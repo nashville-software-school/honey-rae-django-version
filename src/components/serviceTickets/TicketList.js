@@ -39,7 +39,19 @@ export const TicketList = () => {
         }
     }
 
+    const filterTickets = (status) => {
+        fetchIt(`http://localhost:8000/tickets?status=${status}`)
+            .then((tickets) => {
+                setOriginal(tickets)
+            })
+            .catch(() => setOriginal([]))
+    }
+
     return <>
+        <div>
+            <button onClick={() => filterTickets("done")}>Show Done</button>
+            <button onClick={() => filterTickets("all")}>Show All</button>
+        </div>
         <div className="actions">{toShowOrNotToShowTheButton()}</div>
         <div className="activeTickets">{active}</div>
         <article className="tickets">
